@@ -1,0 +1,34 @@
+.header {
+	display: flex;
+	align-items: center;
+
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	height: var(--height-header);
+	width: 100%;
+
+	padding: 0 var(--gl-indent);
+
+	//background-color: $white;
+}
+
+.header__container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header__logo {
+	display: block;
+	width: 20rem;
+
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}

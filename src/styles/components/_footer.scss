@@ -1,0 +1,40 @@
+.footer {
+	padding: 2rem var(--gl-indent);
+}
+
+.footer__content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer__link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.footer__link_name {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.5;
+	border-bottom: 2px solid transparent;
+
+	color: $black;
+
+	transition: border-bottom-color 0.3s ease;
+
+	.footer__link:focus &,
+	.footer__link:hover & {
+		border-bottom-color: inherit;
+	}
+}
+
+.footer__link_icon {
+	width: 4.8rem;
+	height: 4.8rem;
+
+	&:not(:first-child) {
+		margin-left: 1rem;
+	}
+}

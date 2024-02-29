@@ -1,0 +1,59 @@
+.slider__controls {
+
+	.product_slider & {
+		z-index: 10;
+		position: absolute;
+		bottom: 1.6rem;
+		right: 1.6rem;
+
+		display: grid;
+		grid-template-columns: auto auto;
+		gap: 1.2rem;
+	}
+
+	.product_thumb & {
+
+	}
+}
+
+.slider__btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 4.4rem;
+	height: 4.4rem;
+
+	cursor: pointer;
+	border-radius: $glRadius;
+	background-color: $gray_30;
+
+	&.slider__btn--prev {
+		.product_thumb & {
+			left: 0;
+		}
+	}
+
+	&.slider__btn--next {
+		.product_thumb & {
+			right: 0;
+		}
+	}
+
+	.product_thumb & {
+		z-index: 10;
+		position: absolute;
+		top: 0;
+
+		width: 3.2rem;
+		height: 100%;
+	}
+}
+
+.slider__icon {
+	display: block;
+	width: 1.6rem;
+	height: 1.6rem;
+
+	color: $black;
+}
