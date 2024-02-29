@@ -1,0 +1,138 @@
+.product__content_info_wrap {
+	border-radius: $glRadius;
+	background: $gray_30;
+}
+
+.product__content_info_top {
+	padding: 2.2rem 2rem 3.2rem;
+	border-bottom: 1px solid $gray_200;
+}
+
+.product__content_info_bottom {
+	padding: 3.2rem 2rem 2.4rem;
+}
+
+.product__content_info_model {
+	font-weight: 600;
+	font-size: 1.2rem;
+	line-height: 1;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+
+	color: $cyan_950;
+
+	span {
+		color: $gray_40;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+}
+
+.product__content_info_btn_request {
+	&:not(:last-child) {
+		margin-bottom: 1.2rem;
+	}
+}
+
+.product__content_info_read {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 1.2rem;
+	height: 3.2rem;
+
+	border-radius: 0.4rem;
+	background-color: $orange_1;
+}
+
+.product__rating {
+	display: flex;
+	align-items: center;
+
+	font-weight: 700;
+	font-size: 1.4rem;
+	line-height: 1;
+	color: $orange;
+}
+
+.product__rating_icon {
+	display: block;
+	width: 8.8rem;
+	height: 1.6rem;
+	margin-right: 0.8rem;
+}
+
+.product__content_info_read_text {
+	display: flex;
+	align-items: center;
+
+	font-family: $font_2;
+	font-weight: 700;
+	font-size: 1.4rem;
+	line-height: 1;
+	text-transform: uppercase;
+	transition: color 0.3s ease;
+	color: $cyan_950;
+
+	span {
+		padding: 0 0.8rem;
+	}
+
+	.product__content_info_read:hover & {
+		color: $red_1;
+	}
+
+	.product__content_info_read:focus & {
+		color: $red_2;
+	}
+}
+
+.product__content_info_read_icon {
+	width: 1.4rem;
+	height: 1.4rem;
+	transition: transform 0.3s ease;
+
+	.product__content_info_read:hover & {
+		transform: translateX(0.4rem);
+	}
+}
+
+.product__content_price {
+	font-weight: 700;
+	font-size: 1rem;
+	line-height: 1;
+	text-transform: uppercase;
+
+	color: $gray_600;
+
+	small {
+		font-size: 1rem;
+	}
+
+	span {
+		margin-left: 0.22em;
+		letter-spacing: 0.04em;
+		font-size: 2.4rem;
+		color: $dark_azure;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 2.4rem;
+	}
+}
+
+.product__content_request {
+	&:not(:last-child) {
+		margin-bottom: 2.4rem;
+	}
+}
+
+.product__content_info_text {
+	font-weight: 400;
+	font-size: 1.2rem;
+	letter-spacing: 0.056em;
+	line-height: 1.2;
+	color: $gray_600;
+}

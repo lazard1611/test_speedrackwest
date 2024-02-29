@@ -1,0 +1,71 @@
+.btn {
+	display: inline-flex;
+	justify-content: center;
+	padding: 0 1.2rem;
+	align-items: center;
+
+	text-align: center;
+	white-space: nowrap;
+	font-family: $font_2;
+
+	cursor: pointer;
+}
+
+.btn_small {
+	height: 3.2rem;
+
+	font-weight: 700;
+	font-size: 1rem;
+	line-height: 3.2rem;
+	text-transform: uppercase;
+
+	border-radius: 0.4rem;
+	color: $white;
+	background-color: $cyan_950;
+	transition: background-color 0.3s ease, color 0.3s ease;
+
+	//&:hover {
+	//	background-color: $white;
+	//	color: $cyan_950;
+	//}
+}
+
+.btn_base {
+	height: 4.4rem;
+	width: 100%;
+
+	font-weight: 700;
+	font-size: 1.4rem;
+	line-height: 4.4rem;
+	text-transform: uppercase;
+
+	border-radius: $glRadius;
+	color: $white;
+	background-color: $orange;
+	transition: background-color 0.3s ease, color 0.3s ease;
+
+	&:hover {
+		background-color: $red_1;
+	}
+
+	&:focus {
+		background-color: $red_2;
+	}
+
+	&:disabled {
+		background-color: $gray_200;
+	}
+}
+
+.btn__icon {
+	display: block;
+	width: 1.6rem;
+	height: 1.6rem;
+	margin-right: 0.8rem;
+
+	.btn_small & {
+		width: 1.2rem;
+		height: 1.2rem;
+		margin-right: 0.4rem;
+	}
+}

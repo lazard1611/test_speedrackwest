@@ -26,10 +26,9 @@ const slider = () => {
         loop: false,
         slidesPerView: 5,
         spaceBetween: 8,
-        // slideToClickedSlide: true,
-        // freeMode: true,
-        // watchSlidesVisibility: true,
-        // watchSlidesProgress: true,
+        slideToClickedSlide: true,
+        freeMode: true,
+        watchSlidesProgress: true,
 
         navigation: {
             nextEl: SELECTORS.nextBtnThumb,
@@ -41,10 +40,8 @@ const slider = () => {
         // modules: [Navigation, Pagination],
         loop: false,
         slidesPerView: 1,
-        // autoHeight: false,
-        // thumbs: {
-        //     swiper: swiperThumb
-        // },
+        freeMode: true,
+        watchSlidesProgress: true,
 
         navigation: {
             nextEl: SELECTORS.nextBtn,

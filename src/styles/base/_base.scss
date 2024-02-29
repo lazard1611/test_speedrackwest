@@ -1,27 +1,33 @@
 :root {
-	--height-header: 10rem;
 	--gl-indent: 2rem;
 
+	@include bp($tabletPortrait, min) {
+		--height-header: 10rem;
+	}
 
+	@include bp($tabletPortrait - 1) {
+		--height-header: 6rem;
+	}
 }
 
 html {
 	height: 100%;
 	font-family: $font_1;
 	line-height: 1.33;
+	font-size: $fontSizeBase;
 
-	//@include bp($tabletPortrait, min) {
-	//	font-size: calc(100vw / 991 * 16);
-	//}
-	//
-	//@include bp($tabletPortrait - 1, $small) {
-	//	font-size: $fontSizeBase;
-	//}
+	@include bp($desktopLg, min) {
+		font-size: calc(100vw / 1920 * 10);
+	}
+
+	@include bp($desktop - 1, $tabletPortrait) {
+		font-size: calc(100vw / 1440 * 10);
+	}
 	//
 	//@include bp($small - 1) {
 	//	font-size: calc(100vw / 375 * 16);
 	//}
-	font-size: $fontSizeBase;
+
 }
 
 body {

@@ -1,0 +1,118 @@
+.product_options_form {
+
+}
+
+.product_options_check__list {
+
+}
+
+.product_options_check__item {
+	&:not(:last-child) {
+		margin-bottom: 0.4rem;
+	}
+}
+
+.product_options_checkbox__input {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.product_options_checkbox__input:checked + .product_options_check__svg {
+	height: 2rem;
+	animation: draw-checkbox ease-in-out 0.3s forwards;
+}
+
+.product_options_checkbox__input:checked ~ .product_options__info {
+	color: $white;
+}
+
+.product_options_checkbox__input:checked ~ .product_options_checkbox__text {
+	background-color: $dark_azure;
+	color: $white;
+
+	&:after {
+		border: 1px solid $dark_azure;
+		background-color: $dark_azure;
+	}
+}
+
+.product_options_check__svg {
+	z-index: 2;
+	position: absolute;
+	left: 1.5rem;
+	top: 1.6rem;
+
+	height: 0;
+	width: 2rem;
+
+	stroke: $white;
+	stroke-width: 2px;
+	stroke-dasharray: 20;
+}
+
+.product_options_checkbox__label {
+	position: relative;
+}
+
+.product_options_checkbox__text {
+	display: block;
+	padding: 1.2rem 4rem;
+	height: 4.4rem;
+
+	font-weight: 600;
+	font-size: 1.4rem;
+	letter-spacing: 0.055em;
+	line-height: 2.2rem;
+	color: $cyan_900;
+
+	border-radius: $glRadius;
+	background-color: $gray_10;
+	cursor: pointer;
+	transition: background-color 0.3s ease,
+							color 0.3s ease;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 1.2rem;
+		left: 1.2rem;
+
+		height: 2rem;
+		width: 2rem;
+
+		transition: 0.15s all ease-out;
+		border-radius: 0.4rem;
+		border: 1px solid $gray_0;
+		background-color: $white;
+	}
+
+	&:focus ,
+	&:hover {
+		background-color: $azure;
+		color: $white;
+
+		&:after {
+			border-color: $azure;
+		}
+	}
+
+	&:focus + .product_options__info,
+	&:hover + .product_options__info {
+		color: $white;
+	}
+}
+
+@keyframes draw-checkbox {
+	0% {
+		stroke-dashoffset: 20;
+	}
+	100% {
+		stroke-dashoffset: 0;
+	}
+}

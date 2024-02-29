@@ -1,0 +1,59 @@
+.product_options__info {
+	position: relative;
+	color: $gray_600;
+	transition: color 0.3s ease;
+
+	&:not(:first-child) {
+		margin-left: 0.8rem;
+	}
+
+	&:after {
+		--scale: 0;
+		content: attr(data-tooltip);
+		position: absolute;
+		top: -1rem;
+		left: 50%;
+
+		padding: 1.6rem 1.6rem 1.4rem;
+		display: block;
+		width: 16.8rem;
+
+		font-weight: 300;
+		font-size: 1.1rem;
+		line-height: 1.3;
+		letter-spacing: 0.055em;
+		text-align: left;
+
+		color: $cyan_900;
+		background: $white;
+
+		transition: transform 0.3s ease;
+		transform-origin: bottom center;
+		transform: translate(-50%, -100%) scale(var(--scale));
+		border-radius: $glRadius;
+		box-shadow: 0 0.4rem 2rem 0 rgba(0, 0, 0, 0.12);
+	}
+
+	&:hover:after {
+		--scale: 1;
+	}
+
+	&:hover {
+		color: $dark_azure;
+	}
+
+	.product_options_checkbox__label & {
+		position: absolute;
+		top: 1.4rem;
+		right: 1.2rem;
+		margin: 0;
+	}
+}
+
+.product_options__icon {
+	display: block;
+	width: 1.6rem;
+	height: 1.6rem;
+
+	color: inherit;
+}

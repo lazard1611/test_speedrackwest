@@ -1,4 +1,4 @@
-.slider__controls {
+.controls {
 
 	.product_slider & {
 		z-index: 10;
@@ -11,12 +11,14 @@
 		gap: 1.2rem;
 	}
 
-	.product_thumb & {
-
+	.product_options_custom & {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
 	}
 }
 
-.slider__btn {
+.controls__btn {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -28,13 +30,13 @@
 	border-radius: $glRadius;
 	background-color: $gray_30;
 
-	&.slider__btn--prev {
+	&.controls__btn--prev {
 		.product_thumb & {
 			left: 0;
 		}
 	}
 
-	&.slider__btn--next {
+	&.controls__btn--next {
 		.product_thumb & {
 			right: 0;
 		}
@@ -50,7 +52,7 @@
 	}
 }
 
-.slider__icon {
+.controls__icon {
 	display: block;
 	width: 1.6rem;
 	height: 1.6rem;

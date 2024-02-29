@@ -1,0 +1,30 @@
+.product_options_custom {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	margin-top: 1.2rem;
+}
+
+.product_options_custom__view {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	margin: 0 0.8rem;
+	padding: 1rem;
+	width: 6.4rem;
+	height: 4.4rem;
+
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 1;
+
+	color: $gray_900;
+	background-color: $gray_30;
+
+	border: 1px solid #d6dcdd;
+	border-radius: $glRadius;
+}
+
+

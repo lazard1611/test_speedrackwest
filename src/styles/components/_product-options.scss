@@ -1,0 +1,77 @@
+.product_options {
+	&:not(:last-child) {
+		margin-bottom: 3.2rem;
+	}
+}
+
+.product_options__head {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	&:not(:last-child) {
+		margin-bottom: 0.8rem;
+	}
+}
+
+.product_options__title {
+	font-weight: 600;
+	font-size: 1.4rem;
+	line-height: 1;
+	letter-spacing: 0.055em;
+
+	color: $cyan_900;
+}
+
+.product_options__list {
+	display: flex;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: stretch;
+	flex-wrap: wrap;
+	max-width: 30rem;
+
+	margin: 0 -1.2rem -1.2rem 0;
+}
+
+.product_options__item {
+	width: 20%;
+	padding: 0 1.2rem 1.2rem 0;
+
+	&.product_options__item--custom_mod {
+		width: 40%;
+	}
+}
+
+.product_options__btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.9rem 0.8rem;
+	width: 100%;
+
+	font-weight: 700;
+	font-size: 1.4rem;
+	line-height: 1;
+	text-align: center;
+	text-transform: uppercase;
+
+	background-color: $gray_10;
+	color: $cyan_900;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+
+	border-radius: 0.4rem;
+
+	&:focus,
+	&:hover {
+		background-color: $azure;
+		color: $white;
+	}
+
+	&.active {
+		background-color: $dark_azure;
+		color: $white;
+	}
+}

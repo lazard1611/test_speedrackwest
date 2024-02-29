@@ -3,7 +3,6 @@ import { onWindowScroll, exist } from '../utils/utils';
 const header = () => {
     const SELECTORS = {
         header: '.header',
-        menuTrigger: '.js-header-trigger',
     };
 
     const CLASSNAMES = {
@@ -11,22 +10,8 @@ const header = () => {
         headerScrollState: 'header--scroll_state',
     };
 
-    const $body = document.body;
     const $header = document.querySelector(SELECTORS.header);
-    const $menuTrigger = document.querySelector(SELECTORS.menuTrigger);
-    if (!exist([$header, $menuTrigger])) return;
-
-    let isMenuOpen = false;
-
-    const handleTriggerClick = () => {
-        if (!isMenuOpen) {
-            $body.classList.add(CLASSNAMES.bodyOpenMenuState);
-            isMenuOpen = true;
-        } else {
-            $body.classList.remove(CLASSNAMES.bodyOpenMenuState);
-            isMenuOpen = false;
-        }
-    };
+    if (!exist([$header])) return;
 
     const headerScroll = (windowScrollTop) => {
         if (windowScrollTop > 10 && !$header.classList.contains(CLASSNAMES.headerScrollState)) {
@@ -37,10 +22,6 @@ const header = () => {
     };
 
     onWindowScroll(headerScroll);
-
-    $menuTrigger.addEventListener('click', () => {
-        handleTriggerClick();
-    });
 };
 
 export default header;
