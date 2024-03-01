@@ -30,10 +30,10 @@ const slider = () => {
         freeMode: true,
         watchSlidesProgress: true,
 
-        navigation: {
-            nextEl: SELECTORS.nextBtnThumb,
-            prevEl: SELECTORS.prevBtnThumb,
-        }
+        // navigation: {
+        //     nextEl: SELECTORS.nextBtnThumb,
+        //     prevEl: SELECTORS.prevBtnThumb,
+        // }
     });
 
     let swiperMain = new Swiper($mainSlider, {

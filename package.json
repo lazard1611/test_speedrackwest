@@ -1,10 +1,12 @@
 {
   "main": "index.js",
   "description": "",
+  "homepage": "https://lazard1611.github.io/test_speedrackwest/",
   "scripts": {
     "start": "webpack server",
     "build-dev": "webpack",
     "build": "set NODE_ENV=production&&webpack",
+    "deploy": "gh-pages -d build",
     "clear": "rd /s /q dist"
   },
   "devDependencies": {
@@ -29,6 +31,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "gh-pages": "^6.1.1",
     "swiper": "^11.0.7"
   }
 }

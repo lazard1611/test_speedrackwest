@@ -10,6 +10,7 @@
 	&:after {
 		--scale: 0;
 		content: attr(data-tooltip);
+		z-index: 10;
 		position: absolute;
 		top: -1rem;
 		left: 50%;

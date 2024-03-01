@@ -1,9 +1,8 @@
 .product_options_custom {
-	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
 
-	margin-top: 1.2rem;
+	&.hidden {
+		display: none;
+	}
 }
 
 .product_options_custom__view {
@@ -11,9 +10,7 @@
 	align-items: center;
 	justify-content: center;
 
-	margin: 0 0.8rem;
-	padding: 1rem;
-	width: 6.4rem;
+	padding: 1rem 2.4rem;
 	height: 4.4rem;
 
 	font-weight: 400;
@@ -25,6 +22,15 @@
 
 	border: 1px solid #d6dcdd;
 	border-radius: $glRadius;
+
+	@include bp($tabletMd, min) {
+		margin: 0 0.8rem;
+	}
+
+	@include bp($tabletMd) {
+		flex: auto;
+		margin: 0 2rem;
+	}
 }
 
 

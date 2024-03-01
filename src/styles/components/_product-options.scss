@@ -12,6 +12,12 @@
 	&:not(:last-child) {
 		margin-bottom: 0.8rem;
 	}
+
+	.product_options--desktop_disable_mod & {
+		@include bp($tablet, min) {
+			display: none;
+		}
+	}
 }
 
 .product_options__title {
@@ -31,15 +37,32 @@
 	flex-wrap: wrap;
 	max-width: 30rem;
 
-	margin: 0 -1.2rem -1.2rem 0;
+	& + .product_options_custom {
+		margin-top: 1.2rem;
+	}
+
+	@include bp($tablet, min) {
+		margin: 0 -1.2rem -1.2rem 0;
+	}
+
+	@include bp($tablet - 1) {
+		margin: 0 -1.6rem -1.6rem 0;
+	}
 }
 
 .product_options__item {
 	width: 20%;
-	padding: 0 1.2rem 1.2rem 0;
 
 	&.product_options__item--custom_mod {
 		width: 40%;
+	}
+
+	@include bp($tablet, min) {
+		padding: 0 1.2rem 1.2rem 0;
+	}
+
+	@include bp($tablet - 1) {
+		padding: 0 1.6rem 1.6rem 0;
 	}
 }
 
@@ -47,7 +70,6 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: 0.9rem 0.8rem;
 	width: 100%;
 
 	font-weight: 700;
@@ -61,8 +83,7 @@
 	transition:
 		background-color 0.3s ease,
 		color 0.3s ease;
-
-	border-radius: 0.4rem;
+	overflow: hidden;
 
 	&:focus,
 	&:hover {
@@ -73,5 +94,15 @@
 	&.active {
 		background-color: $dark_azure;
 		color: $white;
+	}
+
+	@include bp($tablet, min) {
+		padding: 0.9rem 0.8rem;
+		border-radius: 0.4rem;
+	}
+
+	@include bp($tablet - 1) {
+		padding: 1.5rem 0.8rem;
+		border-radius: $glRadius;
 	}
 }

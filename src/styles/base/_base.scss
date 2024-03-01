@@ -1,13 +1,6 @@
 :root {
 	--gl-indent: 2rem;
-
-	@include bp($tabletPortrait, min) {
-		--height-header: 10rem;
-	}
-
-	@include bp($tabletPortrait - 1) {
-		--height-header: 6rem;
-	}
+	--height-header: 6rem;
 }
 
 html {
@@ -23,11 +16,10 @@ html {
 	@include bp($desktop - 1, $tabletPortrait) {
 		font-size: calc(100vw / 1440 * 10);
 	}
-	//
-	//@include bp($small - 1) {
-	//	font-size: calc(100vw / 375 * 16);
-	//}
 
+	@include bp($small - 1) {
+		font-size: calc(100vw / 360 * 10);
+	}
 }
 
 body {

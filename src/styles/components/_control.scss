@@ -9,6 +9,16 @@
 		display: grid;
 		grid-template-columns: auto auto;
 		gap: 1.2rem;
+
+		@include bp($tablet) {
+			display: none;
+		}
+	}
+
+	.product_thumb & {
+		@include bp($tablet) {
+			display: none;
+		}
 	}
 
 	.product_options_custom & {
@@ -28,7 +38,12 @@
 
 	cursor: pointer;
 	border-radius: $glRadius;
+	color: $black;
 	background-color: $gray_30;
+
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
 
 	&.controls__btn--prev {
 		.product_thumb & {
@@ -50,6 +65,16 @@
 		width: 3.2rem;
 		height: 100%;
 	}
+
+	&:hover {
+		background-color: $azure;
+		color: $white;
+	}
+
+	//&:focus {
+	//	background-color: $dark_azure;
+	//	color: $white;
+	//}
 }
 
 .controls__icon {
@@ -57,5 +82,5 @@
 	width: 1.6rem;
 	height: 1.6rem;
 
-	color: $black;
+	color: inherit;
 }
