@@ -18,18 +18,18 @@ const animation = () => {
     let mm = gsap.matchMedia();
 
     if ($animWrapTitle.length) {
-        mm.add('(min-width: 768px)', () => {
-            $animWrapTitle.forEach(($item, index) => {
-                const $animTitle = $item.querySelector(SELECTORS.animTitle);
-                const $boxTitle = $item.querySelector(SELECTORS.boxTitle);
+        $animWrapTitle.forEach(($item, index) => {
+            const $animTitle = $item.querySelector(SELECTORS.animTitle);
+            const $boxTitle = $item.querySelector(SELECTORS.boxTitle);
 
-                const splitTitle = new SplitText($animTitle, {
-                    type: 'chars',
-                    linesClass: 'split-line',
-                });
+            const splitTitle = new SplitText($animTitle, {
+                type: 'chars',
+                linesClass: 'split-line',
+            });
 
-                const { chars } = splitTitle;
+            const { chars } = splitTitle;
 
+            mm.add('(min-width: 768px)', () => {
                 let tl = gsap.timeline();
 
                 gsap.set(chars, {opacity: 0, rotateX: 90});
@@ -68,9 +68,13 @@ const animation = () => {
                             transformOrigin: 'bottom center',
                             duration: 0.6,
                             scale:0,
-                            ease: 'Power4.easeOut'
+                            ease: 'Power4.easeOut',
                         })
             });
+
+            mm.add('(max-width: 767px)', () => {
+                splitTitle.revert()
+            })
         })
     }
 

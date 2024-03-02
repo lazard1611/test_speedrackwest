@@ -56,6 +56,10 @@
 	@include bp($tablet - 1) {
 		margin: 0 -1.6rem -1.6rem 0;
 	}
+
+	@include bp($tablet - 1) {
+		max-width: 30rem;
+	}
 }
 
 .product_options__item {
