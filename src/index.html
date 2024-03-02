@@ -2,30 +2,29 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport"
-	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+	<title>Test Speedrack West</title>
 </head>
 <body>
+<div class="preloader"></div>
 <header class="header">
 	<div class="header__container">
-		<a class="header__logo" href="https://www.speedrackwest.com/" class="header__logo">
+		<a class="header__logo" href="https://www.speedrackwest.com/">
 			<img src="./img/logo.webp" alt="logo speedrackwest">
 		</a>
 	</div>
 </header>
 
 <div class="wrapper">
-	<div class="base">
-
+	<main class="base">
 		<section class="section product">
 			<div class="product__container">
-				<div class="breadcrumbs">
+				<div class="breadcrumbs js-anim-breadcrumbs">
 					<ul class="breadcrumbs__list">
 						<li class="breadcrumbs__item">
 							<a href="#" class="breadcrumbs__link">
-								<sapn>home</sapn>
+								<span>home</span>
 								<span class="breadcrumbs__link_icon">
 									<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M11 8L0.5 8" stroke="#042A30" stroke-linecap="round" stroke-linejoin="round"/>
@@ -36,7 +35,7 @@
 						</li>
 						<li class="breadcrumbs__item">
 							<a href="#" class="breadcrumbs__link">
-								<sapn>Conveyors</sapn>
+								<span>Conveyors</span>
 								<span class="breadcrumbs__link_icon">
 									<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M11 8L0.5 8" stroke="#042A30" stroke-linecap="round" stroke-linejoin="round"/>
@@ -47,14 +46,14 @@
 						</li>
 						<li class="breadcrumbs__item">
 							<a href="#" class="breadcrumbs__link">
-								<sapn>Incline & Decline Conveyors</sapn>
+								<span>Incline & Decline Conveyors</span>
 							</a>
 						</li>
 					</ul>
 				</div>
 				<div class="product__wrap">
-					<h1 class="product__title">Incline & Decline Conveyors</h1>
-					<div class="product__col_gallery">
+					<h1 class="product__title js-title-anim">Incline & Decline Conveyors</h1>
+					<div class="product__col_gallery js-fade-anim">
 						<div class="product__gallery">
 							<div class="swiper product_slider js-product-slider">
 								<div class="swiper-wrapper">
@@ -126,6 +125,17 @@
 										</span>
 									</button>
 								</div>
+
+								<button class="product__gallery_open js-open-gallery">
+									<span class="product__gallery_open_icon">
+										<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M15.5 10.5V15.5M15.5 15.5H10.5M15.5 15.5L10.8125 10.8125" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M0.5 10.5V15.5M0.5 15.5H5.5M0.5 15.5L5.1875 10.8125" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M15.5 5.5V0.5M15.5 0.5H10.5M15.5 0.5L10.8125 5.1875" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M0.5 5.5V0.5M0.5 0.5H5.5M0.5 0.5L5.1875 5.1875" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</span>
+								</button>
 							</div>
 
 							<div class="swiper product_thumb js-product-thumb">
@@ -181,243 +191,241 @@
 							</div>
 						</div>
 					</div>
-					<div class="product__col_content">
-						<div class="product__content">
-							<div class="product__content_options">
-								<div class="product_options">
-									<div class="product_options__head">
-										<h3 class="product_options__title">
-											Conveyor Belt Width, in
-										</h3>
-										<button
-												class="product_options__info"
-												data-tooltip="Flexible gravity roller conveyors are ideal for maneuvering into places that are not suited for conventional conveyor systems."
-										>
+					<div class="product__content_options js-fade-anim">
+						<div class="product_options">
+							<div class="product_options__head">
+								<h3 class="product_options__title">
+									Conveyor Belt Width, in
+								</h3>
+								<button
+										class="product_options__info"
+										data-tooltip="Flexible gravity roller conveyors are ideal for maneuvering into places that are not suited for conventional conveyor systems."
+								>
 											<span class="product_options__icon">
 												<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path d="M7.5 12.5C7.5 12.7761 7.72386 13 8 13C8.27614 13 8.5 12.7761 8.5 12.5H7.5ZM8.5 6.5C8.5 6.22386 8.27614 6 8 6C7.72386 6 7.5 6.22386 7.5 6.5H8.5ZM15 8C15 11.866 11.866 15 8 15V16C12.4183 16 16 12.4183 16 8H15ZM8 15C4.13401 15 1 11.866 1 8H0C0 12.4183 3.58172 16 8 16V15ZM1 8C1 4.13401 4.13401 1 8 1V0C3.58172 0 0 3.58172 0 8H1ZM8 1C11.866 1 15 4.13401 15 8H16C16 3.58172 12.4183 0 8 0V1ZM8 3.5V4.5C8.55229 4.5 9 4.05228 9 3.5H8ZM8 3.5H7C7 4.05228 7.44772 4.5 8 4.5V3.5ZM8 3.5V2.5C7.44772 2.5 7 2.94772 7 3.5H8ZM8 3.5H9C9 2.94772 8.55229 2.5 8 2.5V3.5ZM8.5 12.5V6.5H7.5V12.5H8.5Z" fill="currentColor"/>
 												</svg>
 											</span>
-										</button>
-									</div>
-									<ul class="product_options__list js-product-options-list">
-										<li class="product_options__item">
-											<button class="product_options__btn active">10”</button>
-										</li>
-										<li class="product_options__item">
-											<button class="product_options__btn">18”</button>
-										</li>
-										<li class="product_options__item">
-											<button class="product_options__btn">24”</button>
-										</li>
-										<li class="product_options__item">
-											<button class="product_options__btn">30”</button>
-										</li>
-										<li class="product_options__item">
-											<button class="product_options__btn">36”</button>
-										</li>
-										<li class="product_options__item">
-											<button class="product_options__btn">42”</button>
-										</li>
-										<li class="product_options__item">
-											<button class="product_options__btn">48”</button>
-										</li>
-										<li class="product_options__item">
-											<button class="product_options__btn">54”</button>
-										</li>
-										<li class="product_options__item product_options__item--custom_mod">
-											<button class="product_options__btn custom_mod">custom</button>
-										</li>
-									</ul>
-									<div class="product_options_custom js-product-options-custom  hidden">
-										<div class="controls js-quantity js-quantity-mod">
-											<button class="controls__btn controls__btn--prev js-quantity-decrease">
+								</button>
+							</div>
+							<ul class="product_options__list js-product-options-list">
+								<li class="product_options__item">
+									<button class="product_options__btn active">10”</button>
+								</li>
+								<li class="product_options__item">
+									<button class="product_options__btn">18”</button>
+								</li>
+								<li class="product_options__item">
+									<button class="product_options__btn">24”</button>
+								</li>
+								<li class="product_options__item">
+									<button class="product_options__btn">30”</button>
+								</li>
+								<li class="product_options__item">
+									<button class="product_options__btn">36”</button>
+								</li>
+								<li class="product_options__item">
+									<button class="product_options__btn">42”</button>
+								</li>
+								<li class="product_options__item">
+									<button class="product_options__btn">48”</button>
+								</li>
+								<li class="product_options__item">
+									<button class="product_options__btn">54”</button>
+								</li>
+								<li class="product_options__item product_options__item--custom_mod">
+									<button class="product_options__btn custom_mod">custom</button>
+								</li>
+							</ul>
+							<div class="product_options_custom js-product-options-custom  hidden">
+								<div class="controls js-quantity js-quantity-mod">
+									<button class="controls__btn controls__btn--prev js-quantity-decrease">
 										<span class="controls__icon">
                       <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M11 1L4.70711 7.29289C4.31658 7.68342 4.31658 8.31658 4.70711 8.70711L11 15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
 											</svg>
 										</span>
-											</button>
-											<div class="product_options_custom__view js-quantity-value">
-												1”
-											</div>
-											<input class="product__quantity__input js-quantity-input" type="number" name="quantity" min="1" value="1">
-											<button class="controls__btn controls__btn--next js-quantity-increase">
+									</button>
+									<div class="product_options_custom__view js-quantity-value">
+										1”
+									</div>
+									<input class="product__quantity__input js-quantity-input" type="number" name="quantity" min="1" value="1">
+									<button class="controls__btn controls__btn--next js-quantity-increase">
 										<span class="controls__icon">
                         <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 											    <path d="M5 1L11.2929 7.29289C11.6834 7.68342 11.6834 8.31658 11.2929 8.70711L5 15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
 											</svg>
 										</span>
-											</button>
-										</div>
-									</div>
-								</div>
-								<div class="product_options">
-									<div class="product_options__head">
-										<h3 class="product_options__title">
-											Bed Section Length, in
-										</h3>
-										<button
-												class="product_options__info"
-												data-tooltip="Flexible gravity roller conveyors are ideal for maneuvering into places that are not suited for conventional conveyor systems."
-										>
-											<span class="product_options__icon">
-												<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M7.5 12.5C7.5 12.7761 7.72386 13 8 13C8.27614 13 8.5 12.7761 8.5 12.5H7.5ZM8.5 6.5C8.5 6.22386 8.27614 6 8 6C7.72386 6 7.5 6.22386 7.5 6.5H8.5ZM15 8C15 11.866 11.866 15 8 15V16C12.4183 16 16 12.4183 16 8H15ZM8 15C4.13401 15 1 11.866 1 8H0C0 12.4183 3.58172 16 8 16V15ZM1 8C1 4.13401 4.13401 1 8 1V0C3.58172 0 0 3.58172 0 8H1ZM8 1C11.866 1 15 4.13401 15 8H16C16 3.58172 12.4183 0 8 0V1ZM8 3.5V4.5C8.55229 4.5 9 4.05228 9 3.5H8ZM8 3.5H7C7 4.05228 7.44772 4.5 8 4.5V3.5ZM8 3.5V2.5C7.44772 2.5 7 2.94772 7 3.5H8ZM8 3.5H9C9 2.94772 8.55229 2.5 8 2.5V3.5ZM8.5 12.5V6.5H7.5V12.5H8.5Z" fill="currentColor"/>
-												</svg>
-											</span>
-										</button>
-									</div>
-									<div class="product_options_custom ">
-										<div class="controls js-quantity js-quantity-mod">
-											<button class="controls__btn controls__btn--prev js-quantity-decrease">
-										<span class="controls__icon">
-                      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M11 1L4.70711 7.29289C4.31658 7.68342 4.31658 8.31658 4.70711 8.70711L11 15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-											</svg>
-										</span>
-											</button>
-											<div class="product_options_custom__view js-quantity-value">
-												10”
-											</div>
-											<input class="product__quantity__input js-quantity-input" type="number" name="quantity" min="1" value="10">
-											<button class="controls__btn controls__btn--next js-quantity-increase">
-										<span class="controls__icon">
-                        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-											    <path d="M5 1L11.2929 7.29289C11.6834 7.68342 11.6834 8.31658 11.2929 8.70711L5 15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-											</svg>
-										</span>
-											</button>
-										</div>
-									</div>
-								</div>
-								<div class="product_options product_options--desktop_disable_mod">
-									<div class="product_options__head">
-										<h3 class="product_options__title">
-											Additional options
-										</h3>
-										<button
-												class="product_options__info"
-												data-tooltip="Some options"
-										>
-											<span class="product_options__icon">
-												<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M7.5 12.5C7.5 12.7761 7.72386 13 8 13C8.27614 13 8.5 12.7761 8.5 12.5H7.5ZM8.5 6.5C8.5 6.22386 8.27614 6 8 6C7.72386 6 7.5 6.22386 7.5 6.5H8.5ZM15 8C15 11.866 11.866 15 8 15V16C12.4183 16 16 12.4183 16 8H15ZM8 15C4.13401 15 1 11.866 1 8H0C0 12.4183 3.58172 16 8 16V15ZM1 8C1 4.13401 4.13401 1 8 1V0C3.58172 0 0 3.58172 0 8H1ZM8 1C11.866 1 15 4.13401 15 8H16C16 3.58172 12.4183 0 8 0V1ZM8 3.5V4.5C8.55229 4.5 9 4.05228 9 3.5H8ZM8 3.5H7C7 4.05228 7.44772 4.5 8 4.5V3.5ZM8 3.5V2.5C7.44772 2.5 7 2.94772 7 3.5H8ZM8 3.5H9C9 2.94772 8.55229 2.5 8 2.5V3.5ZM8.5 12.5V6.5H7.5V12.5H8.5Z" fill="currentColor"/>
-												</svg>
-											</span>
-										</button>
-									</div>
-									<form action="#" class="product_options_form">
-
-										<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-											<symbol id="checkmark" viewBox="0 0 20 20">
-												<path d="M1.375 8.21591L4.05842 10.2773C4.49053 10.6092 5.10885 10.5341 5.44893 10.1084L12.625 1.125" fill="none" stroke-linecap="round" stroke-miterlimit="10"/>
-											</symbol>
-										</svg>
-										<div class="product_options_check__spoiler js-spoiler">
-											<div class="product_options_check__spoiler_head">
-												<span>Select options</span>
-												<div class="product_options_check__spoiler_icon">
-													<svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M11.25 3.75L6.70711 8.29289C6.31658 8.68342 5.68342 8.68342 5.29289 8.29289L0.75 3.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-													</svg>
-												</div>
-											</div>
-											<div class="product_options_check__spoiler_body">
-												<ul class="product_options_check__list">
-													<li class="product_options_check__item">
-														<label class="product_options_checkbox__label">
-															<input type="checkbox" class="product_options_checkbox__input"/>
-															<svg class="product_options_check__svg"><use xlink:href="#checkmark" /></svg>
-															<span class="product_options_checkbox__text">Chain Driven Feeder</span>
-															<button
-																	class="product_options__info"
-																	data-tooltip="Some text"
-															>
-													<span class="product_options__icon">
-												<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M7.5 12.5C7.5 12.7761 7.72386 13 8 13C8.27614 13 8.5 12.7761 8.5 12.5H7.5ZM8.5 6.5C8.5 6.22386 8.27614 6 8 6C7.72386 6 7.5 6.22386 7.5 6.5H8.5ZM15 8C15 11.866 11.866 15 8 15V16C12.4183 16 16 12.4183 16 8H15ZM8 15C4.13401 15 1 11.866 1 8H0C0 12.4183 3.58172 16 8 16V15ZM1 8C1 4.13401 4.13401 1 8 1V0C3.58172 0 0 3.58172 0 8H1ZM8 1C11.866 1 15 4.13401 15 8H16C16 3.58172 12.4183 0 8 0V1ZM8 3.5V4.5C8.55229 4.5 9 4.05228 9 3.5H8ZM8 3.5H7C7 4.05228 7.44772 4.5 8 4.5V3.5ZM8 3.5V2.5C7.44772 2.5 7 2.94772 7 3.5H8ZM8 3.5H9C9 2.94772 8.55229 2.5 8 2.5V3.5ZM8.5 12.5V6.5H7.5V12.5H8.5Z" fill="currentColor"/>
-												</svg>
-											</span>
-															</button>
-														</label>
-													</li>
-													<li class="product_options_check__item">
-														<label class="product_options_checkbox__label">
-															<input type="checkbox" class="product_options_checkbox__input"/>
-															<svg class="product_options_check__svg"><use xlink:href="#checkmark" /></svg>
-															<span class="product_options_checkbox__text">Additional Support Structures</span>
-															<button
-																	class="product_options__info"
-																	data-tooltip="Some text"
-															>
-													<span class="product_options__icon">
-												<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M7.5 12.5C7.5 12.7761 7.72386 13 8 13C8.27614 13 8.5 12.7761 8.5 12.5H7.5ZM8.5 6.5C8.5 6.22386 8.27614 6 8 6C7.72386 6 7.5 6.22386 7.5 6.5H8.5ZM15 8C15 11.866 11.866 15 8 15V16C12.4183 16 16 12.4183 16 8H15ZM8 15C4.13401 15 1 11.866 1 8H0C0 12.4183 3.58172 16 8 16V15ZM1 8C1 4.13401 4.13401 1 8 1V0C3.58172 0 0 3.58172 0 8H1ZM8 1C11.866 1 15 4.13401 15 8H16C16 3.58172 12.4183 0 8 0V1ZM8 3.5V4.5C8.55229 4.5 9 4.05228 9 3.5H8ZM8 3.5H7C7 4.05228 7.44772 4.5 8 4.5V3.5ZM8 3.5V2.5C7.44772 2.5 7 2.94772 7 3.5H8ZM8 3.5H9C9 2.94772 8.55229 2.5 8 2.5V3.5ZM8.5 12.5V6.5H7.5V12.5H8.5Z" fill="currentColor"/>
-												</svg>
-											</span>
-															</button>
-														</label>
-													</li>
-													<li class="product_options_check__item">
-														<label class="product_options_checkbox__label">
-															<input type="checkbox" class="product_options_checkbox__input"/>
-															<svg class="product_options_check__svg"><use xlink:href="#checkmark" /></svg>
-															<span class="product_options_checkbox__text">Knee Braces</span>
-															<button
-																	class="product_options__info"
-																	data-tooltip="Some text"
-															>
-													<span class="product_options__icon">
-												<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M7.5 12.5C7.5 12.7761 7.72386 13 8 13C8.27614 13 8.5 12.7761 8.5 12.5H7.5ZM8.5 6.5C8.5 6.22386 8.27614 6 8 6C7.72386 6 7.5 6.22386 7.5 6.5H8.5ZM15 8C15 11.866 11.866 15 8 15V16C12.4183 16 16 12.4183 16 8H15ZM8 15C4.13401 15 1 11.866 1 8H0C0 12.4183 3.58172 16 8 16V15ZM1 8C1 4.13401 4.13401 1 8 1V0C3.58172 0 0 3.58172 0 8H1ZM8 1C11.866 1 15 4.13401 15 8H16C16 3.58172 12.4183 0 8 0V1ZM8 3.5V4.5C8.55229 4.5 9 4.05228 9 3.5H8ZM8 3.5H7C7 4.05228 7.44772 4.5 8 4.5V3.5ZM8 3.5V2.5C7.44772 2.5 7 2.94772 7 3.5H8ZM8 3.5H9C9 2.94772 8.55229 2.5 8 2.5V3.5ZM8.5 12.5V6.5H7.5V12.5H8.5Z" fill="currentColor"/>
-												</svg>
-											</span>
-															</button>
-														</label>
-													</li>
-													<li class="product_options_check__item">
-														<label class="product_options_checkbox__label">
-															<input type="checkbox" class="product_options_checkbox__input"/>
-															<svg class="product_options_check__svg"><use xlink:href="#checkmark" /></svg>
-															<span class="product_options_checkbox__text">Enhanced support</span>
-															<button
-																	class="product_options__info"
-																	data-tooltip="Some text"
-															>
-													<span class="product_options__icon">
-												<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M7.5 12.5C7.5 12.7761 7.72386 13 8 13C8.27614 13 8.5 12.7761 8.5 12.5H7.5ZM8.5 6.5C8.5 6.22386 8.27614 6 8 6C7.72386 6 7.5 6.22386 7.5 6.5H8.5ZM15 8C15 11.866 11.866 15 8 15V16C12.4183 16 16 12.4183 16 8H15ZM8 15C4.13401 15 1 11.866 1 8H0C0 12.4183 3.58172 16 8 16V15ZM1 8C1 4.13401 4.13401 1 8 1V0C3.58172 0 0 3.58172 0 8H1ZM8 1C11.866 1 15 4.13401 15 8H16C16 3.58172 12.4183 0 8 0V1ZM8 3.5V4.5C8.55229 4.5 9 4.05228 9 3.5H8ZM8 3.5H7C7 4.05228 7.44772 4.5 8 4.5V3.5ZM8 3.5V2.5C7.44772 2.5 7 2.94772 7 3.5H8ZM8 3.5H9C9 2.94772 8.55229 2.5 8 2.5V3.5ZM8.5 12.5V6.5H7.5V12.5H8.5Z" fill="currentColor"/>
-												</svg>
-											</span>
-															</button>
-														</label>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</form>
+									</button>
 								</div>
 							</div>
-							<div class="product__content_info">
-								<div class="product__content_info_wrap">
-									<div class="product__content_info_top">
-										<div class="product__content_info_model">
-											<span>SKU:</span> WMD-2446F-GRYI
+						</div>
+						<div class="product_options">
+							<div class="product_options__head">
+								<h3 class="product_options__title">
+									Bed Section Length, in
+								</h3>
+								<button
+										class="product_options__info"
+										data-tooltip="Flexible gravity roller conveyors are ideal for maneuvering into places that are not suited for conventional conveyor systems."
+								>
+											<span class="product_options__icon">
+												<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M7.5 12.5C7.5 12.7761 7.72386 13 8 13C8.27614 13 8.5 12.7761 8.5 12.5H7.5ZM8.5 6.5C8.5 6.22386 8.27614 6 8 6C7.72386 6 7.5 6.22386 7.5 6.5H8.5ZM15 8C15 11.866 11.866 15 8 15V16C12.4183 16 16 12.4183 16 8H15ZM8 15C4.13401 15 1 11.866 1 8H0C0 12.4183 3.58172 16 8 16V15ZM1 8C1 4.13401 4.13401 1 8 1V0C3.58172 0 0 3.58172 0 8H1ZM8 1C11.866 1 15 4.13401 15 8H16C16 3.58172 12.4183 0 8 0V1ZM8 3.5V4.5C8.55229 4.5 9 4.05228 9 3.5H8ZM8 3.5H7C7 4.05228 7.44772 4.5 8 4.5V3.5ZM8 3.5V2.5C7.44772 2.5 7 2.94772 7 3.5H8ZM8 3.5H9C9 2.94772 8.55229 2.5 8 2.5V3.5ZM8.5 12.5V6.5H7.5V12.5H8.5Z" fill="currentColor"/>
+												</svg>
+											</span>
+								</button>
+							</div>
+							<div class="product_options_custom ">
+								<div class="controls js-quantity js-quantity-mod">
+									<button class="controls__btn controls__btn--prev js-quantity-decrease">
+										<span class="controls__icon">
+                      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M11 1L4.70711 7.29289C4.31658 7.68342 4.31658 8.31658 4.70711 8.70711L11 15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>
+										</span>
+									</button>
+									<div class="product_options_custom__view js-quantity-value">
+										10”
+									</div>
+									<input class="product__quantity__input js-quantity-input" type="number" name="quantity" min="1" value="10">
+									<button class="controls__btn controls__btn--next js-quantity-increase">
+										<span class="controls__icon">
+                        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											    <path d="M5 1L11.2929 7.29289C11.6834 7.68342 11.6834 8.31658 11.2929 8.70711L5 15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="product_options product_options--desktop_disable_mod">
+							<div class="product_options__head">
+								<h3 class="product_options__title">
+									Additional options
+								</h3>
+								<button
+										class="product_options__info"
+										data-tooltip="Some options"
+								>
+											<span class="product_options__icon">
+												<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M7.5 12.5C7.5 12.7761 7.72386 13 8 13C8.27614 13 8.5 12.7761 8.5 12.5H7.5ZM8.5 6.5C8.5 6.22386 8.27614 6 8 6C7.72386 6 7.5 6.22386 7.5 6.5H8.5ZM15 8C15 11.866 11.866 15 8 15V16C12.4183 16 16 12.4183 16 8H15ZM8 15C4.13401 15 1 11.866 1 8H0C0 12.4183 3.58172 16 8 16V15ZM1 8C1 4.13401 4.13401 1 8 1V0C3.58172 0 0 3.58172 0 8H1ZM8 1C11.866 1 15 4.13401 15 8H16C16 3.58172 12.4183 0 8 0V1ZM8 3.5V4.5C8.55229 4.5 9 4.05228 9 3.5H8ZM8 3.5H7C7 4.05228 7.44772 4.5 8 4.5V3.5ZM8 3.5V2.5C7.44772 2.5 7 2.94772 7 3.5H8ZM8 3.5H9C9 2.94772 8.55229 2.5 8 2.5V3.5ZM8.5 12.5V6.5H7.5V12.5H8.5Z" fill="currentColor"/>
+												</svg>
+											</span>
+								</button>
+							</div>
+							<form action="#" class="product_options_form">
+
+								<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+									<symbol id="checkmark" viewBox="0 0 20 20">
+										<path d="M1.375 8.21591L4.05842 10.2773C4.49053 10.6092 5.10885 10.5341 5.44893 10.1084L12.625 1.125" fill="none" stroke-linecap="round" stroke-miterlimit="10"/>
+									</symbol>
+								</svg>
+								<div class="product_options_check__spoiler js-spoiler">
+									<div class="product_options_check__spoiler_head">
+										<span>Select options</span>
+										<div class="product_options_check__spoiler_icon">
+											<svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M11.25 3.75L6.70711 8.29289C6.31658 8.68342 5.68342 8.68342 5.29289 8.29289L0.75 3.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
 										</div>
-										<div class="product__content_info_block">
-											<div class="product__content_info_label_request">
-												<div class="btn btn_small">
+									</div>
+									<div class="product_options_check__spoiler_body">
+										<ul class="product_options_check__list">
+											<li class="product_options_check__item">
+												<div class="product_options_checkbox__wrap">
+													<input id="1" type="checkbox" class="product_options_checkbox__input">
+													<svg class="product_options_check__svg"><use xlink:href="#checkmark"/></svg>
+													<label for="1" class="product_options_checkbox__label">Chain Driven Feeder</label>
+													<button
+															class="product_options__info"
+															data-tooltip="Some text"
+													>
+																<span class="product_options__icon">
+																	<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M7.5 12.5C7.5 12.7761 7.72386 13 8 13C8.27614 13 8.5 12.7761 8.5 12.5H7.5ZM8.5 6.5C8.5 6.22386 8.27614 6 8 6C7.72386 6 7.5 6.22386 7.5 6.5H8.5ZM15 8C15 11.866 11.866 15 8 15V16C12.4183 16 16 12.4183 16 8H15ZM8 15C4.13401 15 1 11.866 1 8H0C0 12.4183 3.58172 16 8 16V15ZM1 8C1 4.13401 4.13401 1 8 1V0C3.58172 0 0 3.58172 0 8H1ZM8 1C11.866 1 15 4.13401 15 8H16C16 3.58172 12.4183 0 8 0V1ZM8 3.5V4.5C8.55229 4.5 9 4.05228 9 3.5H8ZM8 3.5H7C7 4.05228 7.44772 4.5 8 4.5V3.5ZM8 3.5V2.5C7.44772 2.5 7 2.94772 7 3.5H8ZM8 3.5H9C9 2.94772 8.55229 2.5 8 2.5V3.5ZM8.5 12.5V6.5H7.5V12.5H8.5Z" fill="currentColor"/>
+																	</svg>
+																</span>
+													</button>
+												</div>
+											</li>
+											<li class="product_options_check__item">
+												<div class="product_options_checkbox__wrap">
+													<input id="2" type="checkbox" class="product_options_checkbox__input">
+													<svg class="product_options_check__svg"><use xlink:href="#checkmark" /></svg>
+													<label for="2" class="product_options_checkbox__label">Additional Support Structures</label>
+													<button
+															class="product_options__info"
+															data-tooltip="Some text"
+													>
+																<span class="product_options__icon">
+																	<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M7.5 12.5C7.5 12.7761 7.72386 13 8 13C8.27614 13 8.5 12.7761 8.5 12.5H7.5ZM8.5 6.5C8.5 6.22386 8.27614 6 8 6C7.72386 6 7.5 6.22386 7.5 6.5H8.5ZM15 8C15 11.866 11.866 15 8 15V16C12.4183 16 16 12.4183 16 8H15ZM8 15C4.13401 15 1 11.866 1 8H0C0 12.4183 3.58172 16 8 16V15ZM1 8C1 4.13401 4.13401 1 8 1V0C3.58172 0 0 3.58172 0 8H1ZM8 1C11.866 1 15 4.13401 15 8H16C16 3.58172 12.4183 0 8 0V1ZM8 3.5V4.5C8.55229 4.5 9 4.05228 9 3.5H8ZM8 3.5H7C7 4.05228 7.44772 4.5 8 4.5V3.5ZM8 3.5V2.5C7.44772 2.5 7 2.94772 7 3.5H8ZM8 3.5H9C9 2.94772 8.55229 2.5 8 2.5V3.5ZM8.5 12.5V6.5H7.5V12.5H8.5Z" fill="currentColor"/>
+																	</svg>
+																</span>
+													</button>
+												</div>
+											</li>
+											<li class="product_options_check__item">
+												<div class="product_options_checkbox__wrap">
+													<input id="3" type="checkbox" class="product_options_checkbox__input">
+													<svg class="product_options_check__svg"><use xlink:href="#checkmark" /></svg>
+													<label for="3" class="product_options_checkbox__label">Knee Braces</label>
+													<button
+															class="product_options__info"
+															data-tooltip="Some text"
+													>
+																<span class="product_options__icon">
+																	<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M7.5 12.5C7.5 12.7761 7.72386 13 8 13C8.27614 13 8.5 12.7761 8.5 12.5H7.5ZM8.5 6.5C8.5 6.22386 8.27614 6 8 6C7.72386 6 7.5 6.22386 7.5 6.5H8.5ZM15 8C15 11.866 11.866 15 8 15V16C12.4183 16 16 12.4183 16 8H15ZM8 15C4.13401 15 1 11.866 1 8H0C0 12.4183 3.58172 16 8 16V15ZM1 8C1 4.13401 4.13401 1 8 1V0C3.58172 0 0 3.58172 0 8H1ZM8 1C11.866 1 15 4.13401 15 8H16C16 3.58172 12.4183 0 8 0V1ZM8 3.5V4.5C8.55229 4.5 9 4.05228 9 3.5H8ZM8 3.5H7C7 4.05228 7.44772 4.5 8 4.5V3.5ZM8 3.5V2.5C7.44772 2.5 7 2.94772 7 3.5H8ZM8 3.5H9C9 2.94772 8.55229 2.5 8 2.5V3.5ZM8.5 12.5V6.5H7.5V12.5H8.5Z" fill="currentColor"/>
+																	</svg>
+																</span>
+													</button>
+												</div>
+											</li>
+											<li class="product_options_check__item">
+												<div class="product_options_checkbox__wrap">
+													<input id="4" type="checkbox" class="product_options_checkbox__input">
+													<svg class="product_options_check__svg"><use xlink:href="#checkmark" /></svg>
+													<label for="4" class="product_options_checkbox__label">Enhanced support</label>
+													<button
+															class="product_options__info"
+															data-tooltip="Some text"
+													>
+																<span class="product_options__icon">
+																	<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M7.5 12.5C7.5 12.7761 7.72386 13 8 13C8.27614 13 8.5 12.7761 8.5 12.5H7.5ZM8.5 6.5C8.5 6.22386 8.27614 6 8 6C7.72386 6 7.5 6.22386 7.5 6.5H8.5ZM15 8C15 11.866 11.866 15 8 15V16C12.4183 16 16 12.4183 16 8H15ZM8 15C4.13401 15 1 11.866 1 8H0C0 12.4183 3.58172 16 8 16V15ZM1 8C1 4.13401 4.13401 1 8 1V0C3.58172 0 0 3.58172 0 8H1ZM8 1C11.866 1 15 4.13401 15 8H16C16 3.58172 12.4183 0 8 0V1ZM8 3.5V4.5C8.55229 4.5 9 4.05228 9 3.5H8ZM8 3.5H7C7 4.05228 7.44772 4.5 8 4.5V3.5ZM8 3.5V2.5C7.44772 2.5 7 2.94772 7 3.5H8ZM8 3.5H9C9 2.94772 8.55229 2.5 8 2.5V3.5ZM8.5 12.5V6.5H7.5V12.5H8.5Z" fill="currentColor"/>
+																	</svg>
+																</span>
+													</button>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="product__content_info js-fade-anim">
+						<div class="product__content_info_wrap">
+							<div class="product__content_info_top">
+								<div class="product__content_info_model">
+									<span>SKU:</span> WMD-2446F-GRYI
+								</div>
+								<div class="product__content_info_block">
+									<div class="product__content_info_label_request">
+										<div class="btn btn_small">
 													<span class="btn__icon">
 														<svg viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 														  <path d="M1.375 8.21591L4.05842 10.2773C4.49053 10.6092 5.10885 10.5341 5.44893 10.1084L12.625 1.125" stroke="currentColor" stroke-linecap="round" />
 														</svg>
 													</span>
-													<span>Upon request</span>
-												</div>
-											</div>
-											<a href='#' class="product__content_info_read">
-												<div class="product__rating">
+											<span>Upon request</span>
+										</div>
+									</div>
+									<a href='#' class="product__content_info_read">
+										<div class="product__rating">
 												<span class="product__rating_icon">
 													<svg width="88" height="16" viewBox="0 0 88 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path d="M6.38599 3.29526C7.06995 1.59016 7.41193 0.73761 8 0.73761C8.58807 0.73761 8.93005 1.59016 9.61401 3.29526L9.64586 3.37466C10.0323 4.33796 10.2255 4.81961 10.6192 5.11236C11.013 5.40512 11.5299 5.45141 12.5636 5.54399L12.7505 5.56073C14.4424 5.71225 15.2884 5.78801 15.4694 6.32622C15.6504 6.86443 15.0222 7.436 13.7657 8.57912L13.3463 8.96064C12.7103 9.53931 12.3923 9.82865 12.244 10.2079C12.2164 10.2786 12.1934 10.3511 12.1752 10.4248C12.0778 10.8202 12.1709 11.2399 12.3572 12.0794L12.4151 12.3407C12.7574 13.8835 12.9286 14.6549 12.6298 14.9876C12.5181 15.1119 12.373 15.2015 12.2117 15.2454C11.7803 15.3632 11.1677 14.864 9.94266 13.8658C9.13821 13.2103 8.73599 12.8825 8.27419 12.8088C8.09255 12.7798 7.90745 12.7798 7.72581 12.8088C7.26401 12.8825 6.86179 13.2103 6.05734 13.8658C4.83225 14.864 4.2197 15.3632 3.78825 15.2454C3.62703 15.2015 3.4819 15.1119 3.37024 14.9876C3.07141 14.6549 3.24256 13.8835 3.58486 12.3407L3.64283 12.0794C3.82909 11.2399 3.92222 10.8202 3.82479 10.4248C3.80661 10.3511 3.78362 10.2786 3.75597 10.2079C3.60775 9.82865 3.28972 9.53931 2.65367 8.96064L2.23432 8.57913C0.97785 7.436 0.349612 6.86443 0.530625 6.32622C0.711637 5.78801 1.55759 5.71225 3.24948 5.56073L3.43637 5.54399C4.47014 5.45141 4.98703 5.40512 5.38078 5.11236C5.77454 4.81961 5.96774 4.33796 6.35414 3.37466L6.38599 3.29526Z" fill="currentColor"/>
@@ -427,55 +435,53 @@
 													<path d="M78.386 3.29526C79.07 1.59016 79.4119 0.73761 80 0.73761C80.5881 0.73761 80.93 1.59016 81.614 3.29526L81.6459 3.37466C82.0323 4.33796 82.2255 4.81961 82.6192 5.11236C83.013 5.40512 83.5299 5.45141 84.5636 5.54399L84.7505 5.56073C86.4424 5.71225 87.2884 5.78801 87.4694 6.32622C87.6504 6.86443 87.0222 7.436 85.7657 8.57912L85.3463 8.96064C84.7103 9.53931 84.3923 9.82865 84.244 10.2079C84.2164 10.2786 84.1934 10.3511 84.1752 10.4248C84.0778 10.8202 84.1709 11.2399 84.3572 12.0794L84.4151 12.3407C84.7574 13.8835 84.9286 14.6549 84.6298 14.9876C84.5181 15.1119 84.373 15.2015 84.2117 15.2454C83.7803 15.3632 83.1677 14.864 81.9427 13.8658C81.1382 13.2103 80.736 12.8825 80.2742 12.8088C80.0925 12.7798 79.9075 12.7798 79.7258 12.8088C79.264 12.8825 78.8618 13.2103 78.0573 13.8658C76.8323 14.864 76.2197 15.3632 75.7883 15.2454C75.627 15.2015 75.4819 15.1119 75.3702 14.9876C75.0714 14.6549 75.2426 13.8835 75.5849 12.3407L75.6428 12.0794C75.8291 11.2399 75.9222 10.8202 75.8248 10.4248C75.8066 10.3511 75.7836 10.2786 75.756 10.2079C75.6077 9.82865 75.2897 9.53931 74.6537 8.96064L74.2343 8.57913C72.9778 7.436 72.3496 6.86443 72.5306 6.32622C72.7116 5.78801 73.5576 5.71225 75.2495 5.56073L75.4364 5.54399C76.4701 5.45141 76.987 5.40512 77.3808 5.11236C77.7745 4.81961 77.9677 4.33796 78.3541 3.37466L78.386 3.29526Z" fill="currentColor"/>
 													</svg>
 												</span>
-													<span>(20)</span>
-												</div>
-												<div class="product__content_info_read_text">
-													<span>read</span>
-													<div class="product__content_info_read_icon">
-														<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M5 1L11.2929 7.29289C11.6834 7.68342 11.6834 8.31658 11.2929 8.70711L5 15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-														</svg>
-													</div>
-												</div>
-											</a>
+											<span>(20)</span>
 										</div>
-									</div>
-									<div class="product__content_info_bottom">
-										<div class="product__content_price">
-											from <span> $22360 <small>ea</small>*</span>
+										<div class="product__content_info_read_text">
+											<span>read</span>
+											<div class="product__content_info_read_icon">
+												<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M5 1L11.2929 7.29289C11.6834 7.68342 11.6834 8.31658 11.2929 8.70711L5 15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+											</div>
 										</div>
-										<div class="product__quantity js-quantity">
-											<button class="product__quantity__btn js-quantity-decrease" type="button" aria-label="decrease quantity">
+									</a>
+								</div>
+							</div>
+							<div class="product__content_info_bottom">
+								<div class="product__content_price">
+									from <span> $22360 <small>ea</small>*</span>
+								</div>
+								<div class="product__quantity js-quantity">
+									<button class="product__quantity__btn js-quantity-decrease" type="button" aria-label="decrease quantity">
 											<span>
 												<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path d="M15.5 8L0.5 8" stroke="currentColor" stroke-linecap="round"/>
 												</svg>
 											</span>
-											</button>
-											<input class="product__quantity__input js-quantity-input" type="number" name="quantity" min="1" value="1">
-											<div class="product__quantity__value js-quantity-value">1</div>
-											<button class="product__quantity__btn js-quantity-increase" type="button" aria-label="increase quantity">
+									</button>
+									<input class="product__quantity__input js-quantity-input" type="number" name="quantity" min="1" value="1">
+									<div class="product__quantity__value js-quantity-value">1</div>
+									<button class="product__quantity__btn js-quantity-increase" type="button" aria-label="increase quantity">
 											<span>
 												<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path d="M8 0.5L8 15.5M15.5 8L0.5 8" stroke="currentColor" stroke-linecap="round"/>
 												</svg>
 											</span>
-											</button>
-										</div>
-										<div class="product__content_request">
-											<button class="btn btn_base" type="button">
+									</button>
+								</div>
+								<div class="product__content_request">
+									<button class="btn btn_base" type="button">
 											<span class="btn__icon">
 												<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path fill-rule="evenodd" clip-rule="evenodd" d="M2.9803 8.66414e-06C2.98695 1.28365e-05 2.99351 1.69492e-05 2.99999 1.69492e-05L12.6719 1.5161e-05C13.1436 -1.69659e-05 13.5517 -4.46811e-05 13.8558 0.0431671C14.1506 0.085069 14.562 0.195047 14.7377 0.610837C14.9133 1.02663 14.7054 1.39824 14.53 1.63886C14.349 1.88699 14.0645 2.17956 13.7356 2.51778L11.5056 4.81154C11.1756 5.15092 10.9635 5.37056 10.8278 5.55313C10.7008 5.72408 10.6864 5.80401 10.6864 5.85716C10.6864 5.91031 10.7008 5.99024 10.8278 6.16119C10.9635 6.34376 11.1756 6.5634 11.5056 6.90278L13.7356 9.19652C14.0645 9.53474 14.349 9.82732 14.53 10.0755C14.7054 10.3161 14.9133 10.6877 14.7377 11.1035C14.562 11.5193 14.1506 11.6292 13.8558 11.6712C13.5517 11.7144 13.1436 11.7143 12.6719 11.7143L2.99999 11.7143V15.5C2.99999 15.7762 2.77613 16 2.49999 16C2.22384 16 1.99999 15.7762 1.99999 15.5V1.00002C1.99999 0.993544 1.99998 0.986977 1.99998 0.980325C1.99992 0.880388 1.99984 0.761403 2.0136 0.659075C2.03021 0.535552 2.07466 0.364683 2.21966 0.219687C2.36465 0.0746907 2.53552 0.0302357 2.65904 0.0136285C2.76137 -0.000129201 2.88036 -5.4338e-05 2.9803 8.66414e-06Z" fill="currentColor" />
 												</svg>
 											</span>
-												<span>request</span>
-											</button>
-										</div>
-										<div class="product__content_info_text">
-											*Final price is defined after a consultation with our specialist due to actual conditions of use.
-										</div>
-									</div>
+										<span>request</span>
+									</button>
+								</div>
+								<div class="product__content_info_text">
+									*Final price is defined after a consultation with our specialist due to actual conditions of use.
 								</div>
 							</div>
 						</div>
@@ -483,7 +489,7 @@
 				</div>
 			</div>
 		</section>
-	</div>
+	</main>
 
 	<footer class="footer">
 		<div class="footer__container">

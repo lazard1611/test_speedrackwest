@@ -34,7 +34,7 @@
 	color: $white;
 }
 
-.product_options_checkbox__input:checked ~ .product_options_checkbox__text {
+.product_options_checkbox__input:checked ~ .product_options_checkbox__label {
 	background-color: $dark_azure;
 	color: $white;
 
@@ -58,11 +58,11 @@
 	stroke-dasharray: 20;
 }
 
-.product_options_checkbox__label {
+.product_options_checkbox__wrap {
 	position: relative;
 }
 
-.product_options_checkbox__text {
+.product_options_checkbox__label {
 	display: block;
 	padding: 1rem 4rem;
 	min-height: 4.4rem;
@@ -96,11 +96,15 @@
 
 	&:focus ,
 	&:hover {
-		background-color: $azure;
-		color: $white;
+		@include bp($tablet, min) {
+			background-color: $azure;
+			color: $white;
+		}
 
 		&:after {
-			border-color: $azure;
+			@include bp($tablet, min) {
+				border-color: $azure;
+			}
 		}
 	}
 

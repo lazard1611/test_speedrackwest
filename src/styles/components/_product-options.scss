@@ -1,16 +1,24 @@
 .product_options {
 	&:not(:last-child) {
-		margin-bottom: 3.2rem;
+		@include bp($tablet, min) {
+			margin-bottom: 3rem;
+		}
+
+		@include bp($tablet - 1) {
+			margin-bottom: 2.9rem;
+		}
 	}
 }
 
 .product_options__head {
-	display: flex;
+	position: relative;
+	display: inline-flex;
 	align-items: center;
 	justify-content: flex-start;
+	padding-right: 2.5rem;
 
 	&:not(:last-child) {
-		margin-bottom: 0.8rem;
+		margin-bottom: 0.9rem;
 	}
 
 	.product_options--desktop_disable_mod & {

@@ -1,11 +1,10 @@
-// import Swiper from 'swiper';
-import Swiper from '../libs/swiper.min';
-
-// import { Navigation, Pagination } from 'swiper/modules';
+import Swiper from 'swiper';
+import { Navigation, Pagination, Thumbs } from 'swiper/modules';
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import 'swiper/swiper-bundle.css';
 
 const slider = () => {
-
     const SELECTORS = {
         mainSlider: '.js-product-slider',
         fraction: '.js-product-fraction',
@@ -14,6 +13,7 @@ const slider = () => {
         thumbSlider: '.js-product-thumb',
         nextBtnThumb: '.js-thumb-btn-next',
         prevBtnThumb: '.js-thumb-btn-prev',
+        openGallery: '.js-open-gallery',
     }
 
     const $mainSlider = document.querySelector(SELECTORS.mainSlider);
@@ -21,27 +21,66 @@ const slider = () => {
     const $thumbSlider = document.querySelector(SELECTORS.thumbSlider);
     if (!$mainSlider || !$thumbSlider) return;
 
-    let swiperThumb = new Swiper($thumbSlider, {
-        // modules: [Navigation],
+    const $openGallery = document.querySelector(SELECTORS.openGallery);
+
+    let arrFancyOption = [];
+
+    const createFancyOption = (url) => {
+        return {
+            src: url,
+            type: 'image',
+        }
+    }
+
+    const createArrFancyOption = () => {
+        const $imgs = $mainSlider.querySelectorAll('.swiper-slide img');
+        if (!$imgs.length) return;
+        $imgs.forEach(($img) => {
+            const srcImg = $img.getAttribute('src');
+            arrFancyOption.push(createFancyOption(srcImg));
+        });
+    }
+
+    createArrFancyOption();
+
+
+    $openGallery.addEventListener('click', () => {
+        const activeIndex = swiperMain.activeIndex;
+
+        Fancybox.show(arrFancyOption, {
+            startIndex: activeIndex,
+            on: {
+                'Carousel.change': (fancybox, carousel, slide) => {
+                    swiperMain.slideTo(slide);
+                },
+            }
+        });
+    });
+
+    const swiperThumb = new Swiper($thumbSlider, {
         loop: false,
-        slidesPerView: 5,
         spaceBetween: 8,
         slideToClickedSlide: true,
         freeMode: true,
-        watchSlidesProgress: true,
 
-        // navigation: {
-        //     nextEl: SELECTORS.nextBtnThumb,
-        //     prevEl: SELECTORS.prevBtnThumb,
-        // }
+        breakpoints: {
+            768: {
+                slidesPerView: 5,
+            },
+
+            0: {
+                slidesPerView: 4.4,
+            },
+        },
     });
 
-    let swiperMain = new Swiper($mainSlider, {
-        // modules: [Navigation, Pagination],
+    const swiperMain = new Swiper($mainSlider, {
+        modules: [Navigation, Pagination, Thumbs],
         loop: false,
-        slidesPerView: 1,
         freeMode: true,
-        watchSlidesProgress: true,
+        thumbs: {
+            swiper: swiperThumb
+        },
 
         navigation: {
             nextEl: SELECTORS.nextBtn,
@@ -57,17 +96,13 @@ const slider = () => {
         },
     });
 
-    swiperThumb.on('click', function () {
-        const { clickedIndex } = this;
-        swiperThumb.slideTo(clickedIndex);
-        swiperMain.slideTo(clickedIndex);
-    });
+    const $nextBtnThumb = document.querySelector(SELECTORS.nextBtnThumb);
+    const $prevBtnThumb = document.querySelector(SELECTORS.prevBtnThumb);
 
-    swiperMain.controller.control = swiperThumb;
-    swiperThumb.controller.control = swiperMain;
-
-
-    console.log(swiperMain);
+    if ($nextBtnThumb && $prevBtnThumb) {
+        $nextBtnThumb.addEventListener('click', () => swiperMain.slideNext());
+        $prevBtnThumb.addEventListener('click', () => swiperMain.slidePrev());
+    }
 };
 
 export default slider;

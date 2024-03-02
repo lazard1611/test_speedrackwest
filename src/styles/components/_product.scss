@@ -8,13 +8,14 @@
 	}
 
 	@include bp($tabletPortrait, min) {
-		grid-template-columns: 48% 1fr;
+		grid-template-columns: 48% 23.24% 1fr;
+		grid-template-rows: minmax(6rem, auto);
 		column-gap: 4.4rem;
-		row-gap: 2.2rem;
+		row-gap: 1.8rem;
 	}
 
 	@include bp($tabletPortrait - 1) {
-		grid-template-columns: 56% 1fr;
+		grid-template-columns: 57% 1fr;
 		gap: 2rem;
 	}
 }
@@ -25,7 +26,7 @@
 	}
 
 	@include bp($tablet - 1) {
-		margin-bottom: 4rem;
+		margin-bottom: 3.7rem;
 	}
 }
 
@@ -73,6 +74,45 @@
 	@include bp($tablet - 1) {
 		display: none;
 	}
+}
+
+.product__gallery_open {
+	z-index: 10;
+	position: absolute;
+	top: 1.6rem;
+	right: 1.6rem;
+
+	display: inline-flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+
+	width: 4.4rem;
+	height: 4.4rem;
+
+	background-color: $gray_30;
+	color: $black;
+
+	border-radius: $glRadius;
+	overflow: hidden;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+
+	&:hover {
+		background-color: $azure;
+		color: $white;
+	}
+
+	@include bp($tablet - 1) {
+		display: none;
+	}
+}
+
+.product__gallery_open_icon {
+	display: block;
+	width: 1.6rem;
+	height: 1.6rem;
 }
 
 .product_slider__item {
@@ -123,7 +163,7 @@
 	font-weight: 400;
 	font-size: 1rem;
 	line-height: 1;
-	letter-spacing: 0.056em;
+	letter-spacing: 0.059em;
 
 	color: $gray_600;
 
@@ -136,6 +176,10 @@
 	@include bp($tablet, min) {
 		padding: 0 4rem;
 	}
+
+	@include bp($tablet - 1) {
+		padding: 0 1.5rem;
+	}
 }
 
 .product_thumb__item {
@@ -143,20 +187,27 @@
 	border-radius: $glRadius;
 	overflow: hidden;
 
-	&.swiper-slide-active {
+	&.swiper-slide-thumb-active {
 		border-color: $dark_azure;
 	}
 }
 
 .product_thumb__pic {
+	position: relative;
 
 	@include bp($tablet, min) {
-		height: 7rem;
+		padding-top: 67%;
 	}
 
 	@include bp($tablet - 1) {
-		height: 4.6rem;
+		padding-top: 69%;
 	}
+}
+
+.product_thumb__img {
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 
@@ -173,6 +224,7 @@
 	font-weight: 700;
 	line-height: 100%;
 	color: $cyan_950;
+	transform-origin: bottom center;
 
 	&:not(:last-child) {
 		@include bp($tablet) {
@@ -182,7 +234,7 @@
 
 	@include bp($tabletPortrait, min) {
 		font-size: 4rem;
-		grid-column: 2/3;
+		grid-column: 2/4;
 	}
 
 	@include bp($tabletPortrait - 1) {
@@ -199,12 +251,8 @@
 }
 
 .product__content_options {
-	@include bp($tabletPortrait, min) {
-		width: 47.6%;
-	}
-
 	&:not(:last-child) {
-		@include bp($tabletPortrait - 1) {
+		@include bp($tablet - 1) {
 			margin-bottom: 4rem;
 		}
 	}
@@ -212,7 +260,10 @@
 
 .product__content_info {
 	@include bp($tabletPortrait, min) {
-		width: 52.4%;
-		padding-left: 4.4rem;
+		padding-top: 0.3rem;
+	}
+
+	@include bp($tabletPortrait - 1) {
+		grid-column: 1/3;
 	}
 }
