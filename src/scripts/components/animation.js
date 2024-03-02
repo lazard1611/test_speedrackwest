@@ -1,29 +1,77 @@
 import gsap from 'gsap';
+import { SplitText } from 'gsap/SplitText';
 
 const animation = () => {
     const SELECTORS = {
         anim: '.js-fade-anim',
         animBrCrambs: '.js-anim-breadcrumbs',
         animTitle: '.js-title-anim',
+        boxTitle: '.js-title-box',
+        animWrapTitle: '.js-title-anim-wrap',
     }
 
-    const $animFade = document.querySelectorAll(SELECTORS.anim);
-    const $animTitle = document.querySelectorAll(SELECTORS.animTitle);
-    const $animBrCrambs = document.querySelector(SELECTORS.animBrCrambs);
+    gsap.registerPlugin(SplitText);
 
-    if ($animTitle.length) {
-        $animTitle.forEach(($item, index) => {
-            gsap.fromTo($item,
-                {
-                    rotateX: 90,
-                },
-                {
-                    rotateX: 0,
-                    duration: 0.8,
-                    delay: 1 * index,
-                }
-            )
-        });
+    const $animFade = document.querySelectorAll(SELECTORS.anim);
+    const $animWrapTitle = document.querySelectorAll(SELECTORS.animWrapTitle);
+    const $animBrCrambs = document.querySelector(SELECTORS.animBrCrambs);
+    let mm = gsap.matchMedia();
+
+    if ($animWrapTitle.length) {
+        mm.add('(min-width: 768px)', () => {
+            $animWrapTitle.forEach(($item, index) => {
+                const $animTitle = $item.querySelector(SELECTORS.animTitle);
+                const $boxTitle = $item.querySelector(SELECTORS.boxTitle);
+
+                const splitTitle = new SplitText($animTitle, {
+                    type: 'chars',
+                    linesClass: 'split-line',
+                });
+
+                const { chars } = splitTitle;
+
+                let tl = gsap.timeline();
+
+                gsap.set(chars, {opacity: 0, rotateX: 90});
+                tl.addLabel('start')
+                    .to($boxTitle,
+                        {
+                            duration: 0.6,
+                            scale: 1,
+                            ease: 'Power4.easeOut',
+                            transformOrigin: 'bottom center',
+                        },
+                        'start'
+                    )
+                    .to($boxTitle,
+                        {
+                            delay: 1,
+                            duration: 2.2,
+                            left:"96%",
+                            ease: 'Power2.easeOut'
+                        },
+                        'start'
+                    )
+                    .to(chars,
+                        {
+                            transformOrigin: 'bottom center',
+                            opacity: 1,
+                            delay: 1,
+                            duration: 0.4,
+                            ease: 'Power2.easeOut',
+                            rotateX: 0,
+                            stagger: 0.052,
+                        }, 'start'
+                    )
+                    .to($boxTitle,
+                        {
+                            transformOrigin: 'bottom center',
+                            duration: 0.6,
+                            scale:0,
+                            ease: 'Power4.easeOut'
+                        })
+            });
+        })
     }
 
     if ($animFade.length) {
@@ -38,6 +86,9 @@ const animation = () => {
                     opacity: 1,
                     duration: 0.5,
                     delay: 0.5 * index,
+                    onComplete: () => {
+                        gsap.set($item, {clearProps: 'y'})
+                    }
                 }
             )
         });

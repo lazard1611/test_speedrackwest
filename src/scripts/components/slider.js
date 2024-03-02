@@ -25,24 +25,19 @@ const slider = () => {
 
     let arrFancyOption = [];
 
-    const createFancyOption = (url) => {
-        return {
-            src: url,
-            type: 'image',
-        }
-    }
-
     const createArrFancyOption = () => {
         const $imgs = $mainSlider.querySelectorAll('.swiper-slide img');
         if (!$imgs.length) return;
-        $imgs.forEach(($img) => {
-            const srcImg = $img.getAttribute('src');
-            arrFancyOption.push(createFancyOption(srcImg));
-        });
+
+        arrFancyOption = Array.from($imgs).map(($img) => {
+            return {
+                src: $img.src,
+                type: 'image',
+            }
+        })
     }
 
     createArrFancyOption();
-
 
     $openGallery.addEventListener('click', () => {
         const activeIndex = swiperMain.activeIndex;

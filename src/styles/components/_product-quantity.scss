@@ -6,6 +6,7 @@
 	align-items: center;
 
 	width: 100%;
+
 	font-size: 1.6rem;
 	border: none;
 	background-clip: padding-box;
@@ -15,11 +16,12 @@
 	}
 }
 
-.product__quantity__btn {
+.product__quantity_btn {
 	flex-shrink: 0;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+
 	width: 4.4rem;
 	height: 4.4rem;
 
@@ -42,7 +44,7 @@
 	}
 }
 
-.product__quantity__input {
+.product__quantity_input {
 	position: absolute;
 	pointer-events: none;
 	border: 0;
@@ -50,7 +52,7 @@
 	height: 0;
 }
 
-.product__quantity__value {
+.product__quantity_value {
 	padding: 0 1rem;
 	width: 100%;
 	height: 4.4rem;

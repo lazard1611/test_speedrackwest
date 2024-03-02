@@ -15,14 +15,14 @@
 }
 
 .product_options_checkbox__input {
-	border: 0;
-	clip: rect(0 0 0 0);
+	position: absolute;
 	height: 1px;
+	width: 1px;
 	margin: -1px;
 	overflow: hidden;
 	padding: 0;
-	position: absolute;
-	width: 1px;
+	border: 0;
+	clip: rect(0 0 0 0);
 }
 
 .product_options_checkbox__input:checked + .product_options_check__svg {
@@ -125,11 +125,10 @@
 
 .product_options_check__spoiler {
 	@include bp($tablet - 1) {
-		border: 1px solid $gray_200;
-		border-radius: $glRadius;
 		padding: 1.4rem 1.6rem;
 
-
+		border: 1px solid $gray_200;
+		border-radius: $glRadius;
 		background: #f2f5f5;
 	}
 }
@@ -174,8 +173,8 @@
 		opacity 0.3s ease;
 
 	@include bp($tablet - 1) {
-		overflow: hidden;
 		max-height: 0;
+		overflow: hidden;
 	}
 
 	&:not(.active &) {

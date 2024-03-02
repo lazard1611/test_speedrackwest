@@ -5,14 +5,13 @@
 	align-items: center;
 
 	text-align: center;
-	white-space: nowrap;
 	font-family: $font_2;
 
 	cursor: pointer;
 }
 
 .btn_small {
-	height: 3.2rem;
+	min-height: 3.2rem;
 
 	font-weight: 700;
 	font-size: 1rem;
@@ -23,15 +22,10 @@
 	color: $white;
 	background-color: $cyan_950;
 	transition: background-color 0.3s ease, color 0.3s ease;
-
-	//&:hover {
-	//	background-color: $white;
-	//	color: $cyan_950;
-	//}
 }
 
 .btn_base {
-	height: 4.4rem;
+	min-height: 4.4rem;
 	width: 100%;
 
 	font-weight: 700;

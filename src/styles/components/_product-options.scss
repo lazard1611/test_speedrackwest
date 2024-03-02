@@ -43,13 +43,13 @@
 	align-content: flex-start;
 	align-items: stretch;
 	flex-wrap: wrap;
-	max-width: 30rem;
 
 	& + .product_options_custom {
 		margin-top: 1.2rem;
 	}
 
 	@include bp($tablet, min) {
+		max-width: 30rem;
 		margin: 0 -1.2rem -1.2rem 0;
 	}
 
