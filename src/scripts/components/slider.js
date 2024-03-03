@@ -1,8 +1,9 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, Thumbs } from 'swiper/modules';
+import { Navigation, Pagination, Thumbs, Zoom } from 'swiper/modules';
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import 'swiper/swiper-bundle.css';
+import 'swiper/scss/zoom';
 
 const slider = () => {
     const SELECTORS = {
@@ -70,9 +71,10 @@ const slider = () => {
     });
 
     const swiperMain = new Swiper($mainSlider, {
-        modules: [Navigation, Pagination, Thumbs],
+        modules: [Navigation, Pagination, Thumbs, Zoom],
         loop: false,
         freeMode: true,
+        zoom: true,
         thumbs: {
             swiper: swiperThumb
         },

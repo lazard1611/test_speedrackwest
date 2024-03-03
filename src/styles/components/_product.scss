@@ -112,14 +112,11 @@
 }
 
 .product_slider__item {
-
 	.product_slider & {
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-end;
 	}
-
-	padding: 1.6rem 12rem 1.6rem 1.6rem;
 
 	&:after {
 		display: block;
@@ -133,6 +130,14 @@
 			padding-top: 92.6%;
 		}
 	}
+
+	padding: 1.6rem 12rem 1.6rem 1.6rem;
+}
+
+.product_slider__pic {
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 .product_slider__img {
