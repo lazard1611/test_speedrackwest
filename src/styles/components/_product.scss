@@ -207,6 +207,7 @@
 
 .product__title_wrap {
 	position: relative;
+	display: inline-flex;
 
 	@include bp($tabletPortrait, min) {
 		grid-column: 2/4;
