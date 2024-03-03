@@ -57,7 +57,7 @@
 		margin: 0 -1.6rem -1.6rem 0;
 	}
 
-	@include bp($tablet - 1) {
+	@include bp($tabletMd - 1) {
 		max-width: 30rem;
 	}
 }
