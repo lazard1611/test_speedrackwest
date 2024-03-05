@@ -5,6 +5,7 @@ const spoiler = () => {
     $spoilers.forEach(($spoiler) => {
         let isClick = false;
         const $spoilerBody = $spoiler.children[$spoiler.children.length - 1];
+        const $spoilerHead = $spoiler.children[0];
 
         const handleActiveState = () => {
             if (!isClick) {
@@ -18,7 +19,7 @@ const spoiler = () => {
             }
         }
 
-        $spoiler.addEventListener('click', handleActiveState);
+        $spoilerHead.addEventListener('click', handleActiveState);
     })
 };
 

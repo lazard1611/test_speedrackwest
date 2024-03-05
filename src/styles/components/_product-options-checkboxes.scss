@@ -174,13 +174,13 @@
 
 	@include bp($tablet - 1) {
 		max-height: 0;
-		overflow: hidden;
 	}
 
 	&:not(.active &) {
 		@include bp($tablet - 1) {
 			opacity: 0;
 			pointer-events: none;
+			overflow: hidden;
 		}
 	}
 }
